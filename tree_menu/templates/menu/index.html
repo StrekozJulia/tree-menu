@@ -7,7 +7,7 @@
         <article>
           <ul>
             {% for menu in menus %}
-                <li> <a href="{% url 'menu:menu' menu.slug %}"> <h2>{{menu.title}}<h2> </a> </li>
+                <li> <a href="{% url 'menu:menu' menu.slug %}"> <h3>{{menu.title}}<h3> </a> </li>
                     {% if menu == current_menu %}
                         {% draw_menu None %}
                     {% endif %}

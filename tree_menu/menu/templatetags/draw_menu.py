@@ -10,6 +10,7 @@ def draw_menu(context, parent):
     result = {
         'children': children,
         'current_item': context['current_item'],
-        'menu': context['menu']
+        'menu': context['menu'],
+        'parent_tree': context['parent_tree']
     }
     return result

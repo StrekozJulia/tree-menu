@@ -2,10 +2,9 @@
 
 <ul>
     {% for child in children %}
-        <li> <a href="{% url 'menu:item' child.menu.slug child.slug %}"> <h2>{{child.title}}<h2> </a> </li>
-            {% if child.nest_level < current_item.nest_level or child == current_item %}
+        <li> <a href="{% url 'menu:item' child.menu.slug child.slug %}"> {{child.title}} </a> </li>
+            {% if child in parent_tree %}
                 {% draw_menu child %}
-                {% comment %} <p> {{child.nest_level}} </p> {% endcomment %}
             {% endif %}
     {% endfor %}
 </ul>
