@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load draw_menu %}
+
+{% block content %}
+      <div class="container py-5">     
+        <article>
+          <ul>
+            {% for menu in menus %}
+                <li> <a href="{% url 'menu:menu' menu.slug %}"> <h2>{{menu.title}}<h2> </a> </li>
+                    {% if menu == current_menu %}
+                        {% draw_menu None %}
+                    {% endif %}
+            {% endfor %}
+        </ul>
+        </article>
+      </div>  
+{% endblock content %}

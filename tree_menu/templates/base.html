@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+
+  <head>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Подключен файл со стандартными стилями бустрап -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>{% block title %}{% endblock title %} </title>
+  </head>
+
+  <body>
+    <header>
+      {% include "includes/header.html" %}
+    </header>
+    
+    <main> 
+      {% block content %} Нет контента {% endblock content %}
+    </main>
+        
+    <footer class="border-top text-center py-3">
+      {% include "includes/footer.html" %} 
+    </footer>
+
+  </body>
+</html>
